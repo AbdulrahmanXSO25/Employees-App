@@ -1,0 +1,66 @@
+<h1 class="main-title mt-14 text-gray-800 font-bold font-sans text-6xl text-center mx-auto">Cities</h1>
+
+<button [routerLink]="['/employees/add']" class="font-bold font-sans text-2xl py-2 px-3 bg-rose-700 text-gray-50 duration-300 mt-6 border-2 border-rose-700 hover:bg-rose-900 hover:border-rose-900 w-1/5 ml-64">
+  Add Employee
+</button>
+<div class="overflow-x-auto relative w-5/6 mx-auto mt-12 mb-32">
+    <table class="w-full text-sm text-lef">
+        <thead class="bg-rose-800 text-gray-100">
+            <tr>
+                <th scope="col" class="py-3 px-6 w-2/12 text-lg font-bold">
+                    الاسـم بالعربية
+                </th>
+                <th scope="col" class="py-3 px-6 w-2/12 text-lg font-bold">
+                    Employee Name
+                </th>
+                <th scope="col" class="py-3 px-6 w-1/12 text-lg font-bold">
+                    Birth Date
+                </th>
+                <th scope="col" class="py-3 px-6 w-1/12 text-lg font-bold">
+                    Hiring Date
+                </th>
+                <th scope="col" class="py-3 px-6 w-1/12 text-lg font-bold">
+                    Salary
+                </th>
+                <th scope="col" class="py-3 px-6 w-1/12 text-lg font-bold">
+                    Department
+                </th>
+                <th scope="col" class="py-3 px-6 w-1/12 text-lg font-bold">
+                    City
+                </th>
+                <th scope="col" class="py-3 px-6 w-1/12 text-lg font-bold">
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-rose-800 border-b-2" *ngFor="let employee of allEmployees">
+                <td class="py-4 px-6 text-lg font-bold">
+                    {{employee.employeeNameArabic}}
+                </td>
+                <td class="py-4 px-6 text-lg font-bold">
+                    {{employee.employeeNameEnglish}}
+                </td>
+                <td class="py-4 px-6 text-lg font-bold">
+                    {{employee.dob}}
+                </td>
+                <td class="py-4 px-6 text-lg font-bold">
+                    {{employee.hiringDate}}
+                </td>
+                <td class="py-4 px-6 text-lg font-bold">
+                    {{employee.salary}}
+                </td>
+                <td class="py-4 px-6 text-lg font-bold">
+                    {{employee.department.departmentAbbr}}
+                </td>
+                <td class="py-4 px-6 text-lg font-bold">
+                    {{employee.city.cityNameEnglish}}
+                </td>
+                <td class="py-4 px-6">
+                    <a (click)="delete(employee.employeeId)" class="ml-10 font-bold text-blue-700 hover:text-red-700 hover:cursor-pointer">Delete</a>
+                    <a class="ml-10 font-bold text-blue-700 hover:text-blue-900 hover:cursor-pointer">Details</a>
+                    <a class="ml-10 font-bold text-blue-700 hover:text-blue-900 hover:cursor-pointer">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,14 @@
+<h1 class="main-title mt-14 mb-20 text-gray-800 font-bold font-sans text-2xl text-center mx-auto">City Details</h1>
+
+<div class="ml-40">
+  <div class="d-flex mb-10 flex-col">
+    <h1 class="p-2 text-rose-900 border-rose-500 border-b-2 w-80">{{city.cityNameArabic}}</h1>
+    <h1 class="p-2 text-rose-900 border-rose-500 border-b-2 w-80 mt-4">{{city.cityNameEnglish}}</h1>
+  </div>
+
+  <div>
+    <span routerLink="/cities" class="mx-10 font-extrabold text-rose-700 hover:text-blue-900 hover:cursor-pointer">Back To List</span>
+    <span (click)="delete(city.cityId)" class="mx-10 font-bold text-blue-700 hover:text-blue-900 hover:cursor-pointer">Delete</span>
+    <span [routerLink]="['/cities/edit',city.cityId]" class="mx-10 font-bold text-blue-700 hover:text-blue-900 hover:cursor-pointer">Edit</span>
+  </div>
+</div>
