@@ -11,8 +11,13 @@ import { DepartmentsService } from '../departments.service';
 export class EmployeesComponent implements OnInit {
 
   allEmployees:any = [];
-  constructor(public _service:EmployeesService,public _citiesService:CitiesService) {
-      this._service.getAllEmployees().subscribe( (employees) => {
+  constructor(public service:EmployeesService,public _citiesService:CitiesService) {
+    this.getEmployees();
+  }
+
+
+  getEmployees() {
+    this.service.getAllEmployees().subscribe( (employees) => {
       this.allEmployees = employees;
     } );
   }
@@ -21,8 +26,8 @@ export class EmployeesComponent implements OnInit {
   }
 
   delete(id:any){
-    this._service.deleteEmployee(id).subscribe( res =>{
-      this._service.getAllEmployees();
+    this.service.deleteEmployee(id).subscribe( res =>{
+      this.getEmployees();
     })
   }
 
