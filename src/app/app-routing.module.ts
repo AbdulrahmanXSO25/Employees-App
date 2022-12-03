@@ -13,8 +13,10 @@ import { AddDepartmentFormComponent } from './add-department-form/add-department
 import { AddEmployeeFormComponent } from './add-employee-form/add-employee-form.component';
 import { EditEmployeeFormComponent } from './edit-employee-form/edit-employee-form.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  {path: '', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'cities', component: CitiesComponent},
   {path: 'departments', component: DepartmentsComponent},

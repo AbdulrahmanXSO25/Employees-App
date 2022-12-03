@@ -1,9 +1,11 @@
-<form #form="ngForm" (ngSubmit)="postDepartment()" class="ml-28 mt-10 py-6 px-10">
-  <input [(ngModel)]="AddDepartmentRequest.DepartmentName" name="DepartmentName" required placeholder="Department Name" class="font-bold font-sans text-2xl py-2 px-3 focus:outline-none border-2 border-rose-900 text-rose-900 placeholder:text-rose-300 w-2/4 ml-80"/>
+<h1 class="main-title mt-14 mb-10 text-gray-800 font-bold font-sans text-2xl text-center mx-auto">Add Department Form</h1>
+
+<form #form="ngForm" (ngSubmit)="postDepartment()" class="w-2/5 mx-auto mt-10 py-6 px-10">
+  <input [(ngModel)]="AddDepartmentRequest.DepartmentName" name="DepartmentName" required placeholder="Department Name" class="font-bold font-sans text-2xl py-2 px-3 focus:outline-none border-2 border-rose-900 text-rose-900 placeholder:text-rose-300 w-full"/>
   <br/>
-  <input [(ngModel)]="AddDepartmentRequest.DepartmentAbbr" name="DepartmentAbbr" required placeholder="Department Abbreviation" class="font-bold font-sans text-2xl py-2 px-3 mt-6 focus:outline-none border-2 border-rose-900 text-rose-900 placeholder:text-rose-300 w-2/4 ml-80" />
+  <input [(ngModel)]="AddDepartmentRequest.DepartmentAbbr" name="DepartmentAbbr" required placeholder="Department Abbreviation" class="font-bold font-sans text-2xl py-2 px-3 mt-6 focus:outline-none border-2 border-rose-900 text-rose-900 placeholder:text-rose-300 w-full" />
   <br/>
-  <button type="submit" class="disabled:bg-rose-100 disabled:text-rose-900 font-bold font-sans text-2xl py-2 px-3 bg-rose-700 text-gray-50 duration-300 mt-6 border-2 border-rose-700 hover:bg-rose-900 hover:border-rose-900 w-2/4 ml-80">
+  <button type="submit" class="disabled:bg-rose-100 disabled:text-rose-900 font-bold font-sans text-2xl py-2 px-3 bg-rose-700 text-gray-50 duration-300 mt-6 border-2 border-rose-700 hover:bg-rose-900 hover:border-rose-900 w-full">
     Add
   </button>
 </form>

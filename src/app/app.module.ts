@@ -18,6 +18,7 @@ import { AddEmployeeFormComponent } from './add-employee-form/add-employee-form.
 import { EditEmployeeFormComponent } from './edit-employee-form/edit-employee-form.component';
 import { AddDepartmentFormComponent } from './add-department-form/add-department-form.component';
 import { EditDepartmentFormComponent } from './edit-department-form/edit-department-form.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { EditDepartmentFormComponent } from './edit-department-form/edit-departm
     AddEmployeeFormComponent,
     EditEmployeeFormComponent,
     AddDepartmentFormComponent,
-    EditDepartmentFormComponent
+    EditDepartmentFormComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
