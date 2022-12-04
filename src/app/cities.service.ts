@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CitiesService {
 
-  url:string = "https://localhost:44309/api/City";
+  url:string = "http://abdulrahmanxso25-001-site1.atempurl.com/api/City";
 
   constructor(private http:HttpClient) { }
 
