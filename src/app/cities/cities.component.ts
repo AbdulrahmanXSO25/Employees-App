@@ -24,8 +24,10 @@ export class CitiesComponent implements OnInit {
   }
 
   delete(id:any){
-    this.service.deleteCity(id).subscribe(res=>{
-      alert(this.service.getCityById(id).subscribe((res => res.CityNameEnglish)) + " HAS BEEN DELETED SUCCESSFULLY");
+    let cityName:string;
+    this.service.getCityById(id).subscribe(res =>{cityName = res.cityNameEnglish});
+    this.service.deleteCity(id).subscribe(res =>{
+      alert(cityName.toUpperCase() + " HAS BEEN DELETED SUCCESSFULLY");
       this.getCities();
     },
     (err)=> {

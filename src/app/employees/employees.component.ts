@@ -32,7 +32,10 @@ export class EmployeesComponent implements OnInit {
   }
 
   delete(id:any){
+    let employeeName:any;
+    this.service.getEmployeeById(id).subscribe(res => {employeeName = res.employeeNameEnglish});
     this.service.deleteEmployee(id).subscribe( res =>{
+      alert(employeeName.toUpperCase() + " HAS BEEN DELETED SUCCESSFULLY");
       this.getEmployees();
     })
   }

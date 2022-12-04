@@ -15,8 +15,8 @@ export class CitiesService {
   getAllcities():Observable<City>{
     return this.http.get<City>(this.url)
   }
-  getCityById(id:any):Observable<City> {
-    return this.http.get<City>(this.url+"/"+id)
+  getCityById(id:any):Observable<any> {
+    return this.http.get<any>(this.url+"/"+id)
   }
   postCity(city:City):Observable<any> {
     return this.http.post<any>(this.url,city);

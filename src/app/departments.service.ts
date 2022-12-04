@@ -16,7 +16,7 @@ export class DepartmentsService {
     return this.http.get<Department>(this.baseUrl);
   }
   getDepartmentById(id:any):Observable<any>{
-    return this.http.get<Department>(this.baseUrl+"/"+id)
+    return this.http.get<any>(this.baseUrl+"/"+id)
   }
   postDepartment(department:Department){
     return this.http.post<any>(this.baseUrl,department);
