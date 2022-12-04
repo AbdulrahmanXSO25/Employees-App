@@ -2,7 +2,7 @@
 
 <div class="w-3/5 mx-auto mt-16 mb-24">
   <div class="w-full my-10 d-flex">
-    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">Employee Name</span>
+    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">اسـم الموظف</span>
     <span class="w-2/5 bg-rose-200 font-semibold px-4 py-2 text-2xl text-slate-900">{{employee.employeeNameArabic}}</span>
   </div>
   <div class="w-full my-10 d-flex">
@@ -10,23 +10,28 @@
     <span class="w-2/5 bg-rose-200 font-semibold px-4 py-2 text-2xl text-slate-900">{{employee.employeeNameEnglish}}</span>
   </div>
   <div class="w-full my-10 d-flex">
-    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">Employee Name</span>
+    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">Date Of Birth</span>
     <span class="w-2/5 bg-rose-200 font-semibold px-4 py-2 text-2xl text-slate-900">{{employee.dob}}</span>
   </div>
   <div class="w-full my-10 d-flex">
-    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">Employee Name</span>
+    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">Hiring Date</span>
     <span class="w-2/5 bg-rose-200 font-semibold px-4 py-2 text-2xl text-slate-900">{{employee.hiringDate}}</span>
   </div>
   <div class="w-full my-10 d-flex">
-    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">Employee Name</span>
+    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">Salary</span>
     <span class="w-2/5 bg-rose-200 font-semibold px-4 py-2 text-2xl text-slate-900">{{employee.salary}}</span>
   </div>
   <div class="w-full my-10 d-flex">
-    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">Employee Name</span>
+    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">Department</span>
     <span class="w-2/5 bg-rose-200 font-semibold px-4 py-2 text-2xl text-slate-900">{{employee.department.departmentAbbr}}</span>
   </div>
   <div class="w-full my-10 d-flex">
-    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">Employee Name</span>
+    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">City</span>
     <span class="w-2/5 bg-rose-200 font-semibold px-4 py-2 text-2xl text-slate-900">{{employee.city.cityNameEnglish}}</span>
+  </div>
+  <div>
+    <span routerLink="/employees" class="mx-10 font-extrabold text-rose-700 hover:text-blue-900 hover:cursor-pointer">Back To List</span>
+    <span (click)="delete(employee.employeeId)" class="mx-10 font-bold text-blue-700 hover:text-blue-900 hover:cursor-pointer">Delete</span>
+    <span [routerLink]="['/employees/edit',employee.employeeId]" class="mx-10 font-bold text-blue-700 hover:text-blue-900 hover:cursor-pointer">Edit</span>
   </div>
 </div>

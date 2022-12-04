@@ -1,1 +1,14 @@
-<p>add-employee-form works!</p>
+<h1 class="main-title mt-14 mb-10 text-gray-800 font-bold font-sans text-2xl text-center mx-auto">Add Employee Form</h1>
+
+<form #form="ngForm" (ngSubmit)="postEmployee()" class="w-full md:w-2/5 mx-auto mt-10 py-6 px-10">
+  <input [(ngModel)]="AddEmployeeRequest.EmployeeNameArabic" name="EmployeeNameArabic" required placeholder="اسـم الموظف" class="font-bold font-sans text-2xl py-2 px-3 focus:outline-none border-2 border-rose-900 text-rose-900 placeholder:text-rose-300 w-full"/>
+  <input [(ngModel)]="AddEmployeeRequest.EmployeeNameEnglish" name="EmployeeNameEnglish" required placeholder="Employee Name" class="font-bold font-sans text-2xl py-2 px-3 mt-6 focus:outline-none border-2 border-rose-900 text-rose-900 placeholder:text-rose-300 w-full" />
+  <input type="date" [(ngModel)]="AddEmployeeRequest.Dob" name="EmployeeNameEnglish" required class="font-bold font-sans text-2xl py-2 px-3 mt-6 focus:outline-none border-2 border-rose-900 text-rose-900 placeholder:text-rose-300 w-full" />
+  <input type="date" [(ngModel)]="AddEmployeeRequest.HiringDate" name="EmployeeNameEnglish" required class="font-bold font-sans text-2xl py-2 px-3 mt-6 focus:outline-none border-2 border-rose-900 text-rose-900 placeholder:text-rose-300 w-full" />
+  <input type="number" [(ngModel)]="AddEmployeeRequest.Salary" name="EmployeeNameEnglish" required placeholder="Salary" class="font-bold font-sans text-2xl py-2 px-3 mt-6 focus:outline-none border-2 border-rose-900 text-rose-900 placeholder:text-rose-300 w-full" />
+  <input type="number" [(ngModel)]="AddEmployeeRequest.DepartmentId" name="EmployeeNameEnglish" required placeholder="Department Id" class="font-bold font-sans text-2xl py-2 px-3 mt-6 focus:outline-none border-2 border-rose-900 text-rose-900 placeholder:text-rose-300 w-full" />
+  <input type="number" [(ngModel)]="AddEmployeeRequest.CityId" name="EmployeeNameEnglish" required placeholder="City Id" class="font-bold font-sans text-2xl py-2 px-3 mt-6 focus:outline-none border-2 border-rose-900 text-rose-900 placeholder:text-rose-300 w-full" />
+  <button type="submit" class="disabled:bg-rose-100 disabled:text-rose-900 font-bold font-sans text-2xl py-2 px-3 bg-rose-700 text-gray-50 duration-300 mt-6 border-2 border-rose-700 hover:bg-rose-900 hover:border-rose-900 w-full">
+    Add
+  </button>
+</form>

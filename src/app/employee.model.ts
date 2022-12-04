@@ -9,6 +9,4 @@ export interface Employee {
   Salary:number;
   DepartmentId:number;
   CityId:number;
-  City:City;
-  Department:Department;
 }
