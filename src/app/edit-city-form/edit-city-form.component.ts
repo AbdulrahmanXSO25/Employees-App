@@ -33,7 +33,7 @@ export class EditCityFormComponent implements OnInit {
   }
 
   putCity(id:any) {
-    this.service.putCity(id,this.EditCityRequest)
+    this.service.putCity(this.EditCityRequest,id)
     .subscribe((res) => {
         console.log(res);
         alert(this.EditCityRequest.CityNameEnglish.toUpperCase() + " HAS BEEN EDITED SUCCESSFULLY");

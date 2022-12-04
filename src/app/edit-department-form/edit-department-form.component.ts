@@ -32,7 +32,7 @@ export class EditDepartmentFormComponent implements OnInit {
   }
 
   putDepartment(id:any) {
-    this.service.putDepartment(id,this.EditDepartmentRequest)
+    this.service.putDepartment(this.EditDepartmentRequest,id)
     .subscribe((res) => {
         console.log(res);
         alert(this.EditDepartmentRequest.DepartmentName.toUpperCase() + " HAS BEEN EDITED SUCCESSFULLY");

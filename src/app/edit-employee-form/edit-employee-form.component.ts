@@ -53,7 +53,7 @@ export class EditEmployeeFormComponent implements OnInit {
   }
 
   putEmployee(id:any) {
-    this.service.putEmployee(id,this.EditEmployeeRequest)
+    this.service.putEmployee(this.EditEmployeeRequest,id)
     .subscribe((res) => {
         console.log(res);
         alert(this.EditEmployeeRequest.EmployeeNameEnglish.toUpperCase() + " HAS BEEN EDITED SUCCESSFULLY");
