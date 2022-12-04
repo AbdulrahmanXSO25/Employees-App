@@ -12,7 +12,7 @@ export class EmployeesService {
   constructor(private http:HttpClient) { }
 
 
-  baseUrl:string = "http://abdulrahmanxso25-001-site1.atempurl.com/api/Employee";
+  baseUrl:string = "https://localhost:44309/api/Employee";
 
   getAllEmployees():Observable<any> {
     return this.http.get(this.baseUrl);
