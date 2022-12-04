@@ -32,11 +32,9 @@ export class AddCityFormComponent implements OnInit {
     {
       this.service.postCity(this.AddCityRequest)
       .subscribe((res) => {
-      if (res.success)
-      {
         console.log(res);
         alert(this.AddCityRequest.CityNameEnglish.toUpperCase() + " HAS BEEN ADDED SUCCESSFULLY");
-      }
+        if (res.success) this.navigateCities();
       },
       (err) => {
         console.log(err.error);

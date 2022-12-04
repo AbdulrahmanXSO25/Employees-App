@@ -19,6 +19,7 @@ import { EditEmployeeFormComponent } from './edit-employee-form/edit-employee-fo
 import { AddDepartmentFormComponent } from './add-department-form/add-department-form.component';
 import { EditDepartmentFormComponent } from './edit-department-form/edit-department-form.component';
 import { HomeComponent } from './home/home.component';
+import { DatePipe } from '@angular/common';
 
 
 @NgModule({
@@ -47,7 +48,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     ReactiveFormsModule,// ToastrModule added
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

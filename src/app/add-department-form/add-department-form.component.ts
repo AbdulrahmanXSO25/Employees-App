@@ -21,8 +21,8 @@ export class AddDepartmentFormComponent implements OnInit {
   }
 
 
-  navigateCities() {
-    this.router.navigate(['/cities']);
+  navigateDepartments() {
+    this.router.navigate(['/departments']);
   }
 
   formValidated = this.AddDepartmentRequest.DepartmentName == '' && this.AddDepartmentRequest.DepartmentAbbr == '' ? true : false;
@@ -32,11 +32,9 @@ export class AddDepartmentFormComponent implements OnInit {
     {
       this.service.postDepartment(this.AddDepartmentRequest)
       .subscribe((res) => {
-      if (res.success)
-      {
         console.log(res);
         alert(this.AddDepartmentRequest.DepartmentName.toUpperCase() + " HAS BEEN ADDED SUCCESSFULLY");
-      }
+        if (res.success) this.navigateDepartments();
       },
       (err) => {
         console.log(err.error);

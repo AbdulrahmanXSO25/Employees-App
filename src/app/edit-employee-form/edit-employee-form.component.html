@@ -1,46 +1,76 @@
-<h1 class="main-title mt-14 mb-20 text-gray-800 font-bold font-sans text-2xl text-center mx-auto">Edit Employee</h1>
-<div class="w-3/5 mx-auto mt-16 mb-10">
+<h1 class="main-title mt-14 mb-20 text-gray-800 font-bold font-sans text-lg md:text-2xl text-center mx-auto">Edit Employee</h1>
+
+<div class="w-full mx-10 md:w-3/5 md:mx-auto mt-16 mb-24">
   <div class="w-full my-10 d-flex">
-    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">اسـم الموظف</span>
-    <span class="w-2/5 bg-rose-200 font-semibold px-4 py-2 text-2xl text-slate-900">{{employee.employeeNameArabic}}</span>
+    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-lg md:text-2xl text-white">اسـم الموظف</span>
+    <span class="w-8/12 bg-rose-200 font-semibold px-4 py-2 text-lg md:text-2xl text-slate-900">{{employee.employeeNameArabic}}</span>
   </div>
   <div class="w-full my-10 d-flex">
-    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">Employee Name</span>
-    <span class="w-2/5 bg-rose-200 font-semibold px-4 py-2 text-2xl text-slate-900">{{employee.employeeNameEnglish}}</span>
+    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-lg md:text-2xl text-white">Employee Name</span>
+    <span class="w-8/12 bg-rose-200 font-semibold px-4 py-2 text-lg md:text-2xl text-slate-900">{{employee.employeeNameEnglish}}</span>
   </div>
   <div class="w-full my-10 d-flex">
-    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">Date Of Birth</span>
-    <span class="w-2/5 bg-rose-200 font-semibold px-4 py-2 text-2xl text-slate-900">{{employee.dob}}</span>
+    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-lg md:text-2xl text-white">Date Of Birth</span>
+    <span class="w-8/12 bg-rose-200 font-semibold px-4 py-2 text-lg md:text-2xl text-slate-900">{{employee.dob}}</span>
   </div>
   <div class="w-full my-10 d-flex">
-    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">Hiring Date</span>
-    <span class="w-2/5 bg-rose-200 font-semibold px-4 py-2 text-2xl text-slate-900">{{employee.hiringDate}}</span>
+    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-lg md:text-2xl text-white">Hiring Date</span>
+    <span class="w-8/12 bg-rose-200 font-semibold px-4 py-2 text-lg md:text-2xl text-slate-900">{{employee.hiringDate}}</span>
   </div>
   <div class="w-full my-10 d-flex">
-    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">Salary</span>
-    <span class="w-2/5 bg-rose-200 font-semibold px-4 py-2 text-2xl text-slate-900">{{employee.salary}}</span>
+    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-lg md:text-2xl text-white">Salary</span>
+    <span class="w-8/12 bg-rose-200 font-semibold px-4 py-2 text-lg md:text-2xl text-slate-900">{{employee.salary}}</span>
   </div>
   <div class="w-full my-10 d-flex">
-    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">Department</span>
-    <span class="w-2/5 bg-rose-200 font-semibold px-4 py-2 text-2xl text-slate-900">{{employee.department.departmentAbbr}}</span>
+    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-lg md:text-2xl text-white">Department</span>
+    <span class="w-8/12 bg-rose-200 font-semibold px-4 py-2 text-lg md:text-2xl text-slate-900">{{employee.department.departmentAbbr}}</span>
   </div>
   <div class="w-full my-10 d-flex">
-    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-2xl text-white">City</span>
-    <span class="w-2/5 bg-rose-200 font-semibold px-4 py-2 text-2xl text-slate-900">{{employee.city.cityNameEnglish}}</span>
+    <span class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-lg md:text-2xl text-white">City</span>
+    <span class="w-8/12 bg-rose-200 font-semibold px-4 py-2 text-lg md:text-2xl text-slate-900">{{employee.city.cityNameEnglish}}</span>
   </div>
-  <div>
-    <span routerLink="/employees" class="mx-10 font-extrabold text-rose-700 hover:text-blue-900 hover:cursor-pointer">Back To List</span>
+  <div class="w-full mx-auto">
+    <span routerLink="/employees" class="w-2/4 font-extrabold text-rose-700 hover:text-blue-900 hover:cursor-pointer">Back To List</span>
     <span (click)="delete(employee.employeeId)" class="mx-10 font-bold text-blue-700 hover:text-blue-900 hover:cursor-pointer">Delete</span>
-    <span routerLink="['/employees/edit',employee.employeeId]" class="mx-10 font-bold text-blue-700 hover:text-blue-900 hover:cursor-pointer">Edit</span>
   </div>
 </div>
 
-
-<form #form="ngForm" class="ml-28 mt-10 py-6 px-10">
-  <input [(ngModel)]="EditEmployeeRequest.EmployeeNameArabic" name="DepartmentName" required placeholder="{{employee.employeeNameArabic}}" class="font-bold font-sans text-2xl py-2 px-3 focus:outline-none border-2 border-rose-900 text-rose-900 placeholder:text-rose-300 w-2/4 ml-80"/>
-  <input [(ngModel)]="EditEmployeeRequest.EmployeeNameEnglish" name="DepartmentAbbr" required placeholder="{{employee.employeeNameArabic}}" class="font-bold font-sans text-2xl py-2 px-3 mt-6 focus:outline-none border-2 border-rose-900 text-rose-900 placeholder:text-rose-300 w-2/4 ml-80" />
-
-  <button (click)="putEmployee(employee.employeeId)" class="disabled:bg-rose-100 disabled:text-rose-900 font-bold font-sans text-2xl py-2 px-3 bg-rose-700 text-gray-50 duration-300 mt-6 border-2 border-rose-700 hover:bg-rose-900 hover:border-rose-900 w-2/4 ml-80">
-    Edit
-  </button>
+<form #form="ngForm" (ngSubmit)="putEmployee(employee.employeeId)" class="w-full md:w-3/5 mx-10 md:mx-auto mt-16 mb-24">
+  <div class="d-flex flex-wrap gap-2 w-full my-10">
+    <label for="EditEmployeeRequest.EmployeeNameArabic" class="w-3/12 text-center bg-rose-900 font-semibold px-1 py-2 text-lg md:text-3xl text-white">الاسـم بالعربيـة</label>
+    <input [(ngModel)]="EditEmployeeRequest.EmployeeNameArabic" name="EmployeeNameArabic" required class="w-3/5 bg-rose-100 focus:outline-none border-b-2 border-b-transparent text-rose-900 focus:border-b-2 focus:border-b-rose-900 font-semibold px-4 py-2 text-lg md:text-2xl"/>
+  </div>
+  <div class="d-flex flex-wrap gap-2 w-full my-10">
+    <label for="EditEmployeeRequest.EmployeeNameEnglish" class="w-3/12 text-center bg-rose-900 font-semibold px-1 py-2 text-lg md:text-3xl text-white">Employee Name</label>
+    <input [(ngModel)]="EditEmployeeRequest.EmployeeNameEnglish" name="EmployeeNameEnglish" required class="w-3/5 bg-rose-100 focus:outline-none border-b-2 border-b-transparent text-rose-900 focus:border-b-2 focus:border-b-rose-900 font-semibold px-4 py-2 text-lg md:text-2xl"/>
+  </div>
+  <div class="d-flex flex-wrap gap-2 w-full my-10">
+    <label for="EditEmployeeRequest.Dob" class="w-3/12 text-center bg-rose-900 font-semibold px-1 py-2 text-lg md:text-3xl text-white">Birth Date</label>
+    <input type="date" [(ngModel)]="EditEmployeeRequest.Dob" name="Dob" required class="w-3/5 bg-rose-100 focus:outline-none border-b-2 border-b-transparent text-rose-900 focus:border-b-2 focus:border-b-rose-900 font-semibold px-4 py-2 text-lg md:text-2xl"/>
+  </div>
+  <div class="d-flex flex-wrap gap-2 w-full my-10">
+    <label for="EditEmployeeRequest.HiringDate" class="w-3/12 text-center bg-rose-900 font-semibold px-1 py-2 text-lg md:text-3xl text-white">Hiring Date</label>
+    <input type="date" [(ngModel)]="EditEmployeeRequest.HiringDate" name="HiringDate" required class="w-3/5 bg-rose-100 focus:outline-none border-b-2 border-b-transparent text-rose-900 focus:border-b-2 focus:border-b-rose-900 font-semibold px-4 py-2 text-lg md:text-2xl"/>
+  </div>
+  <div class="d-flex flex-wrap gap-2 w-full my-10">
+    <label for="EditEmployeeRequest.Salary" class="w-3/12 text-center bg-rose-900 font-semibold px-1 py-2 text-lg md:text-3xl text-white">Salary</label>
+    <input type="number" [(ngModel)]="EditEmployeeRequest.Salary" name="Salary" required class="w-3/5 bg-rose-100 focus:outline-none border-b-2 border-b-transparent text-rose-900 focus:border-b-2 focus:border-b-rose-900 font-semibold px-4 py-2 text-lg md:text-2xl"/>
+  </div>
+  <div class="d-flex flex-wrap gap-2 w-full my-10">
+    <label for="EditEmployeeRequest.DepartmentId" class="w-3/12 text-center bg-rose-900 font-semibold px-1 py-2 text-lg md:text-3xl text-white">Department</label>
+    <select [(ngModel)]="EditEmployeeRequest.DepartmentId" name="DepartmentId" class="w-3/5 bg-rose-100 focus:outline-none border-b-2 border-b-transparent text-rose-900 focus:border-b-2 focus:border-b-rose-900 font-semibold px-4 py-2 text-lg md:text-2xl">
+      <option *ngFor="let department of allDepartments" [ngValue]="department.departmentId">{{department.departmentAbbr}}</option>
+    </select>
+  </div>
+  <div class="d-flex flex-wrap gap-2 w-full my-10">
+    <label for="EditEmployeeRequest.CityId" class="w-3/12 text-center bg-rose-900 font-semibold px-2 py-2 text-lg md:text-3xl text-white">City</label>
+    <select [(ngModel)]="EditEmployeeRequest.CityId" name="CityId" class="w-3/5 bg-rose-100 focus:outline-none border-b-2 border-b-transparent text-rose-900 focus:border-b-2 focus:border-b-rose-900 font-semibold px-4 py-2 text-lg md:text-2xl">
+      <option *ngFor="let city of allCities" [ngValue]="city.cityId">{{city.cityNameEnglish}}</option>
+    </select>
+  </div>
+  <div class="w-2/4 mx-auto my-10">
+    <button type="submit" class="disabled:bg-rose-100 disabled:text-rose-900 font-bold text-lg md:text-2xl py-2 px-3 bg-rose-700 text-gray-50 duration-300 mt-6 border-2 border-rose-700 hover:bg-rose-900 hover:border-rose-900 w-full">
+      Add
+    </button>
+  </div>
 </form>

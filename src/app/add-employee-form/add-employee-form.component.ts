@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CitiesService } from '../cities.service';
+import { DepartmentsService } from '../departments.service';
 import { Employee } from '../employee.model';
 import { EmployeesService } from '../employees.service';
 
@@ -10,10 +12,21 @@ import { EmployeesService } from '../employees.service';
 })
 export class AddEmployeeFormComponent implements OnInit {
 
-  constructor(public service:EmployeesService, public router:Router) { }
+
+  allDepartments:any = [];
+  allCities:any = [];
+  constructor(public service:EmployeesService, public router:Router, public serviceTwo:DepartmentsService, public serviceThree:CitiesService) {
+    this.serviceTwo.getAllDepartments().subscribe( (departments) => {
+      this.allDepartments = departments;
+    } );
+    this.serviceThree.getAllcities().subscribe( (cities) => {
+      this.allCities = cities;
+    } );
+  }
 
   ngOnInit(): void {
   }
+
 
   AddEmployeeRequest:Employee = {
     EmployeeNameArabic: '',
@@ -26,8 +39,8 @@ export class AddEmployeeFormComponent implements OnInit {
   }
 
 
-  navigateCities() {
-    this.router.navigate(['/cities']);
+  navigateEmployees() {
+    this.router.navigate(['/employees']);
   }
 
   formValidated = this.AddEmployeeRequest.EmployeeNameArabic == '' && this.AddEmployeeRequest.EmployeeNameArabic == '' ? true : false;
@@ -37,11 +50,10 @@ export class AddEmployeeFormComponent implements OnInit {
     {
       this.service.postEmployee(this.AddEmployeeRequest)
       .subscribe((res) => {
-      if (res.success)
-      {
         console.log(res);
+        console.log(this.AddEmployeeRequest);
         alert(this.AddEmployeeRequest.EmployeeNameEnglish.toUpperCase() + " HAS BEEN ADDED SUCCESSFULLY");
-      }
+        if (res.success) this.navigateEmployees();
       },
       (err) => {
         console.log(err.error);
