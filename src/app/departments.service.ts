@@ -10,7 +10,7 @@ export class DepartmentsService {
 
   constructor(private http:HttpClient) { }
 
-  baseUrl:string = "http://abdulrahmanxso25-001-site1.atempurl.com/api/Department"
+  baseUrl:string = "https://abdulrahmanxso25-001-site1.atempurl.com/api/Department"
 
   getAllDepartments():Observable<any> {
     return this.http.get<Department>(this.baseUrl);
